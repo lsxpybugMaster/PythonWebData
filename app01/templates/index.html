@@ -1,0 +1,51 @@
+{% extends 'layout.html' %}
+{% load static %}
+
+{% block content %}
+<div class="px-4 py-5 my-5 text-center">
+    <img class="d-block mx-auto mb-4" src="{% static 'img/emoji-sunglasses.svg' %}" alt="" width="72" height="57">
+    <h1 class="display-5 fw-bold">派森管理系统</h1>
+    <div class="col-lg-6 mx-auto">
+      <p class="lead mb-4">派森管理系统是以django为网络框架,使用python+HTML5构建的网络管理系统,通过您的管理员
+      账号,您可以对系统进行操作管理。该系统提供了多种功能,包含部分测试功能。以及完整的图书管理功能。
+      </p>
+      <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+  
+      </div>
+    </div>
+  </div>
+
+  <div class="px-4 pt-5 my-5 text-center border-bottom">
+    <h1 class="display-4 fw-bold">基于BS的管理</h1>
+    <div class="col-lg-6 mx-auto">
+      <p class="lead mb-4">通过使用python构建视图函数,并将其绑定url来进行后端逻辑设计。并
+      通过django提供的HTML模板功能将信息渲染在前端中。orm的使用使得调用Mysql数据库变得容易，
+      以此构建我们的光明未来。
+      </p>
+      <div class="d-grid gap-2 d-sm-flex justify-content-sm-center mb-5">
+       
+      </div>
+    </div>
+    <div class="overflow-hidden" style="max-height: 30vh;">
+      <div class="container px-5">
+        <img src="{% static 'img/docs.png' %}" class="img-fluid border rounded-3 shadow-lg mb-4" alt="Example image" width="700" height="500" loading="lazy">
+      </div>
+    </div>
+  </div>
+
+  <div class="container col-xxl-8 px-4 py-5">
+    <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+      <div class="col-10 col-sm-8 col-lg-6">
+        <img src="{% static 'img/bt.png' %}" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
+      </div>
+      <div class="col-lg-6">
+        <h1 class="display-5 fw-bold lh-1 mb-3">使用bootstrap构建的现代化界面</h1>
+        <p class="lead">崭新升级！您需要被赋予现代化活力的管理界面。派森系统通过使用boostrapv5来
+        构建遥遥领先的现代化平面网页设计，为您的工作生活添加精彩。
+        </p>
+        <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}

@@ -1,0 +1,51 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<div class = "container"> <!-- container begin -->
+
+<div class="card">
+    <div class="card-body">
+         
+         <a class = "btn btn-success" href="/depart/add">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-plus-circle" viewBox="0 0 16 16">
+            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+            <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+          </svg>
+          新建部门
+         </a> 
+    </div>
+</div>
+
+<div class="card">
+    <div class="card-body">
+        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-list-ul" viewBox="0 0 16 16">
+          <path fill-rule="evenodd" d="M5 11.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm-3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm0 4a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm0 4a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
+        </svg>
+        部门列表
+    </div>
+    <table class="table" >
+        <thead>
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">名称</th>
+            <th scope="col">操作</th>
+            <!-- <th scope="col">Handle</th> -->
+          </tr>
+        </thead>
+        <tbody>
+          {% for obj in queryset %}
+          <tr>
+            <th scope="row"> {{ obj.id }} </th>
+            <td> {{ obj.title }} </td>
+            <td>
+                <a class = "btn btn-primary btn-sm" href="/depart/{{obj.id}}/edit/">编辑</a>
+                <a class = "btn btn-danger btn-sm" href="/depart/delete/?nid={{obj.id}}">删除</a>
+            </td>         
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+</div>
+
+</div><!-- container end -->
+{% endblock %}
